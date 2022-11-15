@@ -1,0 +1,168 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kolker+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script&family=Kolker+Brush&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+.flex{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-name{
+  color: #3B3C36;
+  font-weight: bold;
+  font-size: 3.7rem;
+}
+.logo{
+  width: 100%;
+  min-height:6rem;
+  position:absolute;
+  top:0;
+  left:0;
+  padding: .5rem 6.5rem;
+  font-size: 2.6rem;
+  background: rgba(230, 230, 230, 0.5);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: 'Dancing Script';
+}
+.wrppr{
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.footer{
+  width: 100%;
+  min-height: 5.8rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.19);
+  background: rgba(230, 230, 230, 0.5);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: -5.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.cds, .crd, .view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cds{
+  height: 40rem;
+  width: 40rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cds .crd{
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+.crd.shake{
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
+}
+.crd .view{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  background: #fff;
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.25s linear;
+}
+.crd .front-view img{
+  width: 5rem;
+}
+.crd .back-view img{
+  max-width: 4.5rem;
+}
+.crd .back-view{
+  transform: rotateY(-180deg);
+}
+.crd.flip .back-view{
+  transform: rotateY(0);
+}
+.crd.flip .front-view{
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 700px) {
+  .cds{
+    height: 350px;
+    width: 350px;
+  }
+  .crd .front-view img{
+    width: 35px;
+  }
+  .crd .back-view img{
+    max-width: 40px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cds{
+    height: 300px;
+    width: 300px;
+  }
+  .crd .front-view img{
+    width: 30px;
+  }
+  .crd .back-view img{
+    max-width: 35px;
+  }
+}
+@media ( max-width:380px)
+{
+  html{
+    font-size: 40%;
+  }
+}
+.name{
+  margin:0px 10px;
+  font-family: 'Caveat';
+  font-size: 26px;
+}
